@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../Entities/Entity.h"
-#include "../Entities/Herbivoro.h"
 #include "../Entities/Planta.h"
 
 class State {

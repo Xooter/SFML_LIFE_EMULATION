@@ -1,9 +1,9 @@
-CMakeFiles/gme.dir/src/States/GameState.cpp.o: \
- /home/tetra/verbatim/gm/src/States/GameState.cpp \
+CMakeFiles/gme.dir/src/Entities/Carnivoro.cpp.o: \
+ /home/tetra/verbatim/gm/src/Entities/Carnivoro.cpp \
  /usr/include/stdc-predef.h \
- /home/tetra/verbatim/gm/src/States/GameState.h \
- /home/tetra/verbatim/gm/src/States/../Entities/Metazoo.h \
- /home/tetra/verbatim/gm/src/States/../Entities/Entity.h \
+ /home/tetra/verbatim/gm/src/Entities/Carnivoro.h \
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
+ /home/tetra/verbatim/gm/src/Entities/Entity.h \
  /usr/include/c++/13.2.1/algorithm \
  /usr/include/c++/13.2.1/bits/stl_algobase.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -187,7 +187,7 @@ CMakeFiles/gme.dir/src/States/GameState.cpp.o: \
  /usr/include/c++/13.2.1/bits/stl_vector.h \
  /usr/include/c++/13.2.1/bits/stl_bvector.h \
  /usr/include/c++/13.2.1/bits/vector.tcc \
- /home/tetra/verbatim/gm/src/States/../Entities/../imgui/imgui-SFML.h \
+ /home/tetra/verbatim/gm/src/Entities/../imgui/imgui-SFML.h \
  /usr/include/SFML/Graphics/Color.hpp \
  /usr/include/SFML/Graphics/Export.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/Graphics/Rect.hpp /usr/include/SFML/System/Vector2.hpp \
@@ -205,10 +205,10 @@ CMakeFiles/gme.dir/src/States/GameState.cpp.o: \
  /usr/include/SFML/System/Utf.inl /usr/include/c++/13.2.1/iterator \
  /usr/include/c++/13.2.1/bits/stream_iterator.h \
  /usr/include/SFML/System/String.inl \
- /home/tetra/verbatim/gm/src/States/../Entities/../imgui/imgui-SFML_export.h \
- /home/tetra/verbatim/gm/src/States/../Entities/../imgui/imgui.h \
- /home/tetra/verbatim/gm/src/States/../Entities/../imgui/imconfig.h \
- /home/tetra/verbatim/gm/src/States/../Entities/../imgui/imconfig-SFML.h \
+ /home/tetra/verbatim/gm/src/Entities/../imgui/imgui-SFML_export.h \
+ /home/tetra/verbatim/gm/src/Entities/../imgui/imgui.h \
+ /home/tetra/verbatim/gm/src/Entities/../imgui/imconfig.h \
+ /home/tetra/verbatim/gm/src/Entities/../imgui/imconfig-SFML.h \
  /usr/include/c++/13.2.1/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
@@ -284,5 +284,4 @@ CMakeFiles/gme.dir/src/States/GameState.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/tetra/verbatim/gm/src/States/../Entities/Planta.h \
- /home/tetra/verbatim/gm/src/States/State.h
+ /home/tetra/verbatim/gm/src/Entities/Planta.h

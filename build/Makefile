@@ -177,29 +177,29 @@ src/Entities/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Entity.cpp.s
 .PHONY : src/Entities/Entity.cpp.s
 
-src/Entities/Herbivoro.o: src/Entities/Herbivoro.cpp.o
-.PHONY : src/Entities/Herbivoro.o
+src/Entities/Metazoo.o: src/Entities/Metazoo.cpp.o
+.PHONY : src/Entities/Metazoo.o
 
 # target to build an object file
-src/Entities/Herbivoro.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o
-.PHONY : src/Entities/Herbivoro.cpp.o
+src/Entities/Metazoo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o
+.PHONY : src/Entities/Metazoo.cpp.o
 
-src/Entities/Herbivoro.i: src/Entities/Herbivoro.cpp.i
-.PHONY : src/Entities/Herbivoro.i
+src/Entities/Metazoo.i: src/Entities/Metazoo.cpp.i
+.PHONY : src/Entities/Metazoo.i
 
 # target to preprocess a source file
-src/Entities/Herbivoro.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.i
-.PHONY : src/Entities/Herbivoro.cpp.i
+src/Entities/Metazoo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.i
+.PHONY : src/Entities/Metazoo.cpp.i
 
-src/Entities/Herbivoro.s: src/Entities/Herbivoro.cpp.s
-.PHONY : src/Entities/Herbivoro.s
+src/Entities/Metazoo.s: src/Entities/Metazoo.cpp.s
+.PHONY : src/Entities/Metazoo.s
 
 # target to generate assembly for a file
-src/Entities/Herbivoro.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.s
-.PHONY : src/Entities/Herbivoro.cpp.s
+src/Entities/Metazoo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gme.dir/build.make CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.s
+.PHONY : src/Entities/Metazoo.cpp.s
 
 src/Entities/Planta.o: src/Entities/Planta.cpp.o
 .PHONY : src/Entities/Planta.o
@@ -480,9 +480,9 @@ help:
 	@echo "... src/Entities/Entity.o"
 	@echo "... src/Entities/Entity.i"
 	@echo "... src/Entities/Entity.s"
-	@echo "... src/Entities/Herbivoro.o"
-	@echo "... src/Entities/Herbivoro.i"
-	@echo "... src/Entities/Herbivoro.s"
+	@echo "... src/Entities/Metazoo.o"
+	@echo "... src/Entities/Metazoo.i"
+	@echo "... src/Entities/Metazoo.s"
 	@echo "... src/Entities/Planta.o"
 	@echo "... src/Entities/Planta.i"
 	@echo "... src/Entities/Planta.s"

@@ -10,7 +10,7 @@ CMakeFiles/gme.dir/main.cpp.o
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /home/tetra/verbatim/gm/src/UI/Button.h
  /home/tetra/verbatim/gm/src/States/GameState.h
@@ -736,15 +736,15 @@ CMakeFiles/gme.dir/src/Entities/Entity.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h
 
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp
  /home/tetra/verbatim/gm/src/imgui/imconfig-SFML.h
  /home/tetra/verbatim/gm/src/imgui/imconfig.h
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML.h
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /usr/include/SFML/Audio.hpp
  /usr/include/SFML/Audio/AlResource.hpp
@@ -1476,7 +1476,7 @@ CMakeFiles/gme.dir/src/Game.cpp.o
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /home/tetra/verbatim/gm/src/UI/Button.h
  /home/tetra/verbatim/gm/src/States/GameState.h
@@ -1847,7 +1847,7 @@ CMakeFiles/gme.dir/src/States/GameState.cpp.o
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /home/tetra/verbatim/gm/src/States/GameState.h
  /home/tetra/verbatim/gm/src/States/State.h
@@ -2215,7 +2215,7 @@ CMakeFiles/gme.dir/src/States/MainMenuState.cpp.o
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /home/tetra/verbatim/gm/src/UI/Button.h
  /home/tetra/verbatim/gm/src/States/GameState.h
@@ -2585,7 +2585,6 @@ CMakeFiles/gme.dir/src/States/State.cpp.o
  /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h
  /home/tetra/verbatim/gm/src/imgui/imgui.h
  /home/tetra/verbatim/gm/src/Entities/Entity.h
- /home/tetra/verbatim/gm/src/Entities/Herbivoro.h
  /home/tetra/verbatim/gm/src/Entities/Planta.h
  /home/tetra/verbatim/gm/src/States/State.h
  /usr/include/SFML/Audio.hpp

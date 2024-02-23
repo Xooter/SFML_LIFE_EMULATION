@@ -249,7 +249,7 @@ CMakeFiles/gme.dir/src/States/MainMenuState.cpp.o: \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
  /home/tetra/verbatim/gm/src/States/GameState.h \
- /home/tetra/verbatim/gm/src/States/State.h \
+ /home/tetra/verbatim/gm/src/States/../Entities/Metazoo.h \
  /home/tetra/verbatim/gm/src/States/../Entities/Entity.h \
  /usr/include/c++/13.2.1/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
@@ -285,5 +285,5 @@ CMakeFiles/gme.dir/src/States/MainMenuState.cpp.o: \
  /usr/include/c++/13.2.1/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
  /usr/include/string.h /usr/include/strings.h /usr/include/assert.h \
- /home/tetra/verbatim/gm/src/States/../Entities/Herbivoro.h \
- /home/tetra/verbatim/gm/src/States/../Entities/Planta.h
+ /home/tetra/verbatim/gm/src/States/../Entities/Planta.h \
+ /home/tetra/verbatim/gm/src/States/State.h

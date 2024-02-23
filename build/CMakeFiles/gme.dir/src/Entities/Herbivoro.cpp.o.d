@@ -2,6 +2,8 @@ CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o: \
  /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp \
  /usr/include/stdc-predef.h \
  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+ /home/tetra/verbatim/gm/src/Entities/Carnivoro.h \
+ /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
  /home/tetra/verbatim/gm/src/Entities/Entity.h \
  /usr/include/c++/13.2.1/algorithm \
  /usr/include/c++/13.2.1/bits/stl_algobase.h \

@@ -27,8 +27,10 @@ void Entity::update(const float &dt) {
   if (this->health <= 0) {
     this->morir();
   }
-
-  envejecer(dt);
+  float deltaTime = this->clock.getElapsedTime().asSeconds();
+  if (deltaTime >= 1.0f) {
+    envejecer(dt);
+  }
 }
 
 void Entity::render(sf::RenderTarget *target) { target->draw(this->shape); }
@@ -36,17 +38,14 @@ void Entity::render(sf::RenderTarget *target) { target->draw(this->shape); }
 void Entity::morir() { this->alive = false; }
 
 void Entity::envejecer(const float &dt) {
-  float deltaTime = this->clock.getElapsedTime().asSeconds();
-  if (deltaTime >= 1.0f) {
-    this->clock.restart();
+  this->clock.restart();
 
-    float hunger_per_tick = 2.f;
-    if (this->estado != DURMIENDO) {
-      this->energy -= hunger_per_tick * this->energyReduction;
-    }
-    this->hunger += hunger_per_tick;
-    this->age += 0.1f;
+  float hunger_per_tick = 2.f;
+  if (this->estado != DURMIENDO) {
+    this->energy -= hunger_per_tick * this->energyReduction;
   }
+  this->hunger += hunger_per_tick;
+  this->age += 0.1f;
 }
 
 bool Entity::isAlive() { return this->alive; }

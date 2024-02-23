@@ -21,7 +21,6 @@
 class Entity {
 private:
   bool alive = true;
-  void envejecer(const float &dt);
 
 protected:
   sf::Clock clock;
@@ -37,7 +36,6 @@ protected:
 
   sf::RectangleShape shape;
 
-  float health = 100;        // vida
   float energy = 100;        // energia
   float hunger = 0;          // hambre
   float energyReduction = 1; // sed
@@ -45,13 +43,16 @@ protected:
 
   Estado estado;
 
+  virtual void envejecer(const float &dt);
+
 public:
   Entity(sf::Color color, float initPosX = 0.f, float initPosY = 0.f);
   ~Entity();
 
-  int sex;          // sexo 0 = hembra, 1 = macho
-  float speed = 1;  // velocidad
-  float vision = 0; // vision
+  float health = 100; // vida
+  int sex;            // sexo 0 = hembra, 1 = macho
+  float speed = 1;    // velocidad
+  float vision = 100; // vision
 
   float age = 0; // edad
 

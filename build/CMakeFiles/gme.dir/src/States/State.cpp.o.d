@@ -282,5 +282,4 @@ CMakeFiles/gme.dir/src/States/State.cpp.o: \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
  /usr/include/SFML/Graphics/VertexBuffer.hpp \
- /home/tetra/verbatim/gm/src/States/../Entities/Herbivoro.h \
  /home/tetra/verbatim/gm/src/States/../Entities/Planta.h

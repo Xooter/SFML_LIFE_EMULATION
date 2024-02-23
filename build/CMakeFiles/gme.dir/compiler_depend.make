@@ -9,7 +9,7 @@ CMakeFiles/gme.dir/main.cpp.o: /home/tetra/verbatim/gm/main.cpp \
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+  /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /home/tetra/verbatim/gm/src/UI/Button.h \
   /home/tetra/verbatim/gm/src/States/GameState.h \
@@ -734,14 +734,14 @@ CMakeFiles/gme.dir/src/Entities/Entity.cpp.o: /home/tetra/verbatim/gm/src/Entiti
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h
 
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o: /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp \
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o: /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp \
   /home/tetra/verbatim/gm/src/imgui/imconfig-SFML.h \
   /home/tetra/verbatim/gm/src/imgui/imconfig.h \
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML.h \
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+  /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /usr/include/SFML/Audio.hpp \
   /usr/include/SFML/Audio/AlResource.hpp \
@@ -1471,7 +1471,7 @@ CMakeFiles/gme.dir/src/Game.cpp.o: /home/tetra/verbatim/gm/src/Game.cpp \
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+  /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /home/tetra/verbatim/gm/src/UI/Button.h \
   /home/tetra/verbatim/gm/src/States/GameState.h \
@@ -1841,7 +1841,7 @@ CMakeFiles/gme.dir/src/States/GameState.cpp.o: /home/tetra/verbatim/gm/src/State
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+  /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /home/tetra/verbatim/gm/src/States/GameState.h \
   /home/tetra/verbatim/gm/src/States/State.h \
@@ -2208,7 +2208,7 @@ CMakeFiles/gme.dir/src/States/MainMenuState.cpp.o: /home/tetra/verbatim/gm/src/S
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
+  /home/tetra/verbatim/gm/src/Entities/Metazoo.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /home/tetra/verbatim/gm/src/UI/Button.h \
   /home/tetra/verbatim/gm/src/States/GameState.h \
@@ -2577,7 +2577,6 @@ CMakeFiles/gme.dir/src/States/State.cpp.o: /home/tetra/verbatim/gm/src/States/St
   /home/tetra/verbatim/gm/src/imgui/imgui-SFML_export.h \
   /home/tetra/verbatim/gm/src/imgui/imgui.h \
   /home/tetra/verbatim/gm/src/Entities/Entity.h \
-  /home/tetra/verbatim/gm/src/Entities/Herbivoro.h \
   /home/tetra/verbatim/gm/src/Entities/Planta.h \
   /home/tetra/verbatim/gm/src/States/State.h \
   /usr/include/SFML/Audio.hpp \
@@ -4832,8 +4831,6 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 
 /usr/include/c++/13.2.1/clocale:
 
-/usr/include/c++/13.2.1/cerrno:
-
 /usr/include/c++/13.2.1/cctype:
 
 /usr/include/c++/13.2.1/bits/vector.tcc:
@@ -4851,16 +4848,6 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 /usr/include/c++/13.2.1/bits/stringfwd.h:
 
 /usr/include/c++/13.2.1/bits/string_view.tcc:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/13.2.1/cassert:
-
-/usr/include/c++/13.2.1/bits/locale_classes.tcc:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/vpclmulqdqintrin.h:
-
-/usr/include/c++/13.2.1/bits/memoryfwd.h:
 
 /usr/include/bits/errno.h:
 
@@ -5042,8 +5029,6 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 
 /usr/include/c++/13.2.1/bits/stl_map.h:
 
-/home/tetra/verbatim/gm/src/Entities/Herbivoro.h:
-
 /home/tetra/verbatim/gm/src/imgui/imgui_internal.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
@@ -5104,6 +5089,34 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 
 /usr/include/bits/time64.h:
 
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/13.2.1/cassert:
+
+/usr/include/c++/13.2.1/bits/locale_classes.tcc:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/vpclmulqdqintrin.h:
+
+/usr/include/c++/13.2.1/bits/memoryfwd.h:
+
+/usr/include/c++/13.2.1/cerrno:
+
+/home/tetra/verbatim/gm/src/Entities/Metazoo.h:
+
+/usr/include/SFML/Graphics/Export.hpp:
+
+/usr/include/c++/13.2.1/bits/align.h:
+
+/usr/include/SFML/Graphics/Sprite.hpp:
+
+/usr/include/SFML/Audio/SoundBuffer.hpp:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/math.h:
+
+/usr/include/SFML/Graphics/Transform.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/hresetintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/clzerointrin.h:
@@ -5160,8 +5173,6 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 
 /usr/include/SFML/Window/WindowBase.hpp:
 
-/home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp:
-
 /usr/include/c++/13.2.1/cstdio:
 
 /usr/include/SFML/System/InputStream.hpp:
@@ -5177,20 +5188,6 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 /usr/include/SFML/System.hpp:
 
 /usr/include/SFML/Graphics/Color.hpp:
-
-/usr/include/SFML/Graphics/Export.hpp:
-
-/usr/include/c++/13.2.1/bits/align.h:
-
-/usr/include/SFML/Graphics/Sprite.hpp:
-
-/usr/include/SFML/Audio/SoundBuffer.hpp:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/math.h:
-
-/usr/include/SFML/Graphics/Transform.hpp:
 
 /usr/include/c++/13.2.1/iterator:
 
@@ -5217,6 +5214,8 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.o: /home/tetra/verbatim/gm/src/im
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/f16cintrin.h:
 
 /usr/include/SFML/Window/Vulkan.hpp:
+
+/home/tetra/verbatim/gm/src/Entities/Metazoo.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h:
 

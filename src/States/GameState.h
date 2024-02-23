@@ -1,4 +1,5 @@
 #pragma once
+#include "../Entities/Metazoo.h"
 #include "State.h"
 
 class GameState : public State {
@@ -17,13 +18,18 @@ private:
 
   void spawnPlantas();
   void spawnHerbivoros();
+  void spawnCarnivoros();
+
   void updateEntidades(const float &dt);
 
-  std::vector<Planta *> plantas;
+  std::vector<Entity *> plantas;
   int plantasNumber = 0;
 
-  std::vector<Herbivoro *> herbivoros;
+  std::vector<Entity *> herbivoros;
   int herbivorosNumber = 1;
+
+  std::vector<Entity *> carnivoros;
+  int carnivorosNumber = 1;
 
   void matarEntidades();
 };

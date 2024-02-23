@@ -7,6 +7,7 @@ GameState::GameState(sf::RenderWindow *window,
   this->initKeybinds();
   this->spawnPlantas();
   this->spawnHerbivoros();
+  this->spawnCarnivoros();
 }
 
 GameState::~GameState() {}
@@ -37,12 +38,32 @@ void GameState::spawnHerbivoros() {
       int initRandomX = rand() % this->window->getSize().x;
       int initRandomY = rand() % this->window->getSize().y;
 
-      this->herbivoros.push_back(new Herbivoro(sf::Color::Blue, &this->plantas,
-                                               initRandomX, initRandomY));
+      this->herbivoros.push_back(new Metazoo(sf::Color::Blue, 1, &this->plantas,
+                                             &this->carnivoros, initRandomX,
+                                             initRandomY));
     }
   } else {
     for (int i = this->herbivoros.size(); i > this->herbivorosNumber; i--) {
       this->herbivoros.pop_back();
+    }
+  }
+}
+
+void GameState::spawnCarnivoros() {
+  if (this->carnivoros.size() < this->carnivorosNumber) {
+
+    for (int i = this->carnivoros.size(); i < this->carnivorosNumber; i++) {
+
+      int initRandomX = rand() % this->window->getSize().x;
+      int initRandomY = rand() % this->window->getSize().y;
+
+      this->carnivoros.push_back(new Metazoo(sf::Color::Red, 5,
+                                             &this->herbivoros, NULL,
+                                             initRandomX, initRandomY));
+    }
+  } else {
+    for (int i = this->carnivoros.size(); i > this->carnivorosNumber; i--) {
+      this->carnivoros.pop_back();
     }
   }
 }
@@ -56,6 +77,16 @@ void GameState::matarEntidades() {
       it = herbivoros.erase(it);
     } else {
       ++it;
+    }
+  }
+
+  auto itC = carnivoros.begin();
+  while (itC != carnivoros.end()) {
+    if (!(*itC)->isAlive()) {
+      delete *itC;
+      itC = carnivoros.erase(itC);
+    } else {
+      ++itC;
     }
   }
 }
@@ -109,6 +140,11 @@ void GameState::updateEntidades(const float &dt) {
   for (auto her : this->herbivoros) {
     her->update(dt);
   }
+
+  for (auto car : this->carnivoros) {
+    car->update(dt);
+  }
+
   ImGui::End();
 }
 
@@ -122,10 +158,12 @@ void GameState::ImguiMenu() {
 
   ImGui::SliderInt("Plantas", &this->plantasNumber, 0, 100);
   ImGui::SliderInt("Herbivoro", &this->herbivorosNumber, 0, 500);
+  ImGui::SliderInt("Carnivoros", &this->carnivorosNumber, 0, 200);
 
   if (ImGui::Button("Spawn")) {
     this->spawnPlantas();
     this->spawnHerbivoros();
+    this->spawnCarnivoros();
   }
 
   ImGui::Dummy(ImVec2(0.0f, 20.0f));
@@ -134,6 +172,8 @@ void GameState::ImguiMenu() {
     ImGui::Text("Plantas: %d", (int)this->plantas.size());
   if (!this->herbivoros.empty())
     ImGui::Text("Herbivoros: %d", (int)this->herbivoros.size());
+  if (!this->carnivoros.empty())
+    ImGui::Text("Carnivoros: %d", (int)this->carnivoros.size());
 
   ImGui::End();
 }
@@ -155,5 +195,9 @@ void GameState::render(sf::RenderTarget *target) {
 
   for (auto her : this->herbivoros) {
     her->render(target);
+  }
+
+  for (auto car : this->carnivoros) {
+    car->render(target);
   }
 }

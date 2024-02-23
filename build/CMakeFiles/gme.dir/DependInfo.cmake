@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tetra/verbatim/gm/main.cpp" "CMakeFiles/gme.dir/main.cpp.o" "gcc" "CMakeFiles/gme.dir/main.cpp.o.d"
   "/home/tetra/verbatim/gm/src/Entities/Entity.cpp" "CMakeFiles/gme.dir/src/Entities/Entity.cpp.o" "gcc" "CMakeFiles/gme.dir/src/Entities/Entity.cpp.o.d"
-  "/home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp" "CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o" "gcc" "CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o.d"
+  "/home/tetra/verbatim/gm/src/Entities/Metazoo.cpp" "CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o" "gcc" "CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o.d"
   "/home/tetra/verbatim/gm/src/Entities/Planta.cpp" "CMakeFiles/gme.dir/src/Entities/Planta.cpp.o" "gcc" "CMakeFiles/gme.dir/src/Entities/Planta.cpp.o.d"
   "/home/tetra/verbatim/gm/src/Game.cpp" "CMakeFiles/gme.dir/src/Game.cpp.o" "gcc" "CMakeFiles/gme.dir/src/Game.cpp.o.d"
   "/home/tetra/verbatim/gm/src/States/GameState.cpp" "CMakeFiles/gme.dir/src/States/GameState.cpp.o" "gcc" "CMakeFiles/gme.dir/src/States/GameState.cpp.o.d"

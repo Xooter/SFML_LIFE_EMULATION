@@ -97,19 +97,19 @@ CMakeFiles/gme.dir/src/Entities/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gme.dir/src/Entities/Entity.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tetra/verbatim/gm/src/Entities/Entity.cpp -o CMakeFiles/gme.dir/src/Entities/Entity.cpp.s
 
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o: CMakeFiles/gme.dir/flags.make
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o: /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o: CMakeFiles/gme.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tetra/verbatim/gm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o -MF CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o.d -o CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o -c /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o: CMakeFiles/gme.dir/flags.make
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o: /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o: CMakeFiles/gme.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tetra/verbatim/gm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o -MF CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o.d -o CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o -c /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp
 
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp > CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.i
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp > CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.i
 
-CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tetra/verbatim/gm/src/Entities/Herbivoro.cpp -o CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.s
+CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tetra/verbatim/gm/src/Entities/Metazoo.cpp -o CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.s
 
 CMakeFiles/gme.dir/src/Entities/Planta.cpp.o: CMakeFiles/gme.dir/flags.make
 CMakeFiles/gme.dir/src/Entities/Planta.cpp.o: /home/tetra/verbatim/gm/src/Entities/Planta.cpp
@@ -269,7 +269,7 @@ CMakeFiles/gme.dir/src/imgui/imgui_widgets.cpp.s: cmake_force
 gme_OBJECTS = \
 "CMakeFiles/gme.dir/main.cpp.o" \
 "CMakeFiles/gme.dir/src/Entities/Entity.cpp.o" \
-"CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o" \
+"CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o" \
 "CMakeFiles/gme.dir/src/Entities/Planta.cpp.o" \
 "CMakeFiles/gme.dir/src/Game.cpp.o" \
 "CMakeFiles/gme.dir/src/States/GameState.cpp.o" \
@@ -287,7 +287,7 @@ gme_EXTERNAL_OBJECTS =
 
 gme: CMakeFiles/gme.dir/main.cpp.o
 gme: CMakeFiles/gme.dir/src/Entities/Entity.cpp.o
-gme: CMakeFiles/gme.dir/src/Entities/Herbivoro.cpp.o
+gme: CMakeFiles/gme.dir/src/Entities/Metazoo.cpp.o
 gme: CMakeFiles/gme.dir/src/Entities/Planta.cpp.o
 gme: CMakeFiles/gme.dir/src/Game.cpp.o
 gme: CMakeFiles/gme.dir/src/States/GameState.cpp.o

@@ -1,10 +1,14 @@
-#include "Herbivoro.h"
+#include "Metazoo.h"
 
-Herbivoro::Herbivoro(sf::Color color, std::vector<Planta *> *comida,
-                     float initPosX, float initPosY)
+Metazoo::Metazoo(sf::Color color, float comidaPotenciador,
+                 std::vector<Entity *> *comida,
+                 std::vector<Entity *> *predadores, float initPosX,
+                 float initPosY)
     : Entity(color, initPosX, initPosY) {
 
   this->comida = comida;
+  this->comidaPotenciador = comidaPotenciador;
+  this->predadores = predadores;
 
   this->estado = IDLE;
   this->waitToMove = rand() % 2 + 1;
@@ -16,9 +20,9 @@ Herbivoro::Herbivoro(sf::Color color, std::vector<Planta *> *comida,
   this->timeToSleep = rand() % 16 + 15; // entre 30 y 15
 }
 
-Herbivoro::~Herbivoro() {}
+Metazoo::~Metazoo() {}
 
-void Herbivoro::move(float x, float y) {
+void Metazoo::move(float x, float y, const float &dt, float speedBoost) {
   float speed = this->speed;
   if (this->age < 6)
     speed = this->speed * 0.6;
@@ -27,23 +31,44 @@ void Herbivoro::move(float x, float y) {
   if (this->age > 60)
     speed = this->speed * 0.2;
 
-  this->shape.move(x * speed, y * speed);
+  double magnitud = sqrt(x * x + y * y);
+  if (magnitud > 0) {
+    x /= magnitud;
+    y /= magnitud;
+  }
+
+  this->shape.move(20 * x * (speed * speedBoost) * dt,
+                   20 * y * (speed * speedBoost) * dt);
 }
 
-void Herbivoro::setState(Estado estado) { this->estado = estado; }
+void Metazoo::setState(Estado estado) { this->estado = estado; }
 
-void Herbivoro::update(const float &dt) {
+void Metazoo::update(const float &dt) {
   Entity::update(dt);
 
   this->debug();
 
-  if (this->energy <= 0 && this->hunger >= 100)
+  if (this->energy <= 0 && this->hunger >= 100 || this->health <= 0)
     this->morir();
 
   if (this->energy < this->timeToSleep) {
     this->setState(DURMIENDO);
-  } else if (this->hunger > 20 && this->estado != COMIENDO) {
+  } else if (this->hunger > 10.f * this->comidaPotenciador &&
+             this->estado != COMIENDO &&
+             (this->estado != DURMIENDO || this->energy > 80) &&
+             !this->comida->empty()) {
     this->setState(BUSCANDO_COMIDA);
+  }
+
+  if (this->predadores != NULL && this->estado != COMIENDO) {
+    for (auto predador : *this->predadores) {
+      if (this->distanceTo(predador->getPosition()) < this->vision &&
+          (this->estado != DURMIENDO ||
+           this->distanceTo(predador->getPosition()) < this->vision / 2) &&
+          predador != this) {
+        this->setState(HUYENDO);
+      }
+    }
   }
 
   switch (this->estado) {
@@ -71,7 +96,7 @@ void Herbivoro::update(const float &dt) {
   }
 }
 
-void Herbivoro::idle(const float &dt) {
+void Metazoo::idle(const float &dt) {
   this->waitToMove -= dt;
   this->walkingTime -= dt;
 
@@ -95,44 +120,43 @@ void Herbivoro::idle(const float &dt) {
       this->getPosition().x > 0 && this->getPosition().y < 1080 &&
       this->getPosition().y > 0) {
 
-    this->move(20 * this->randomLocation.x * dt,
-               20 * this->randomLocation.y * dt);
+    this->move(this->randomLocation.x, this->randomLocation.y, dt);
   }
 }
 
-void Herbivoro::buscarComida(const float &dt) {
-  if (this->comida->empty())
-    setState(IDLE);
+Entity *Metazoo::getClosestEntity(std::vector<Entity *> *entities,
+                                  float ageRestriction) {
+  Entity *closestEntity = entities->at(0);
 
-  for (auto planta : *this->comida) {
-    if (this->comidaActual == nullptr ||
-        (this->distanceTo(planta->getPosition()) <
-         this->distanceTo(this->comidaActual)) &&
-            planta->age > 1.f) {
-      this->comidaActual = planta;
+  for (auto entity : *entities) {
+    if (entity != this &&
+        this->distanceTo(entity->getPosition()) <
+            this->distanceTo(closestEntity) &&
+        entity->age > ageRestriction) {
+      closestEntity = entity;
     }
   }
+
+  return closestEntity;
+}
+
+void Metazoo::buscarComida(const float &dt) {
+
+  this->comidaActual = this->getClosestEntity(this->comida, 1.f);
 
   double diferenciaX =
       (this->comidaActual->getPosition().x - this->getPosition().x);
   double diferenciaY =
       (this->comidaActual->getPosition().y - this->getPosition().y);
 
-  // Normalizar la diferencia
-  double magnitud = sqrt(diferenciaX * diferenciaX + diferenciaY * diferenciaY);
-  if (magnitud > 0) {
-    diferenciaX /= magnitud;
-    diferenciaY /= magnitud;
-  }
+  this->move(diferenciaX, diferenciaY, dt, 1.8f);
 
-  this->move(20 * diferenciaX * dt, 20 * diferenciaY * dt);
-
-  float randomDistance = rand() % 15 + 5;
+  float randomDistance = rand() % 5;
   if (this->distanceTo(this->comidaActual->getPosition()) < randomDistance)
     this->setState(COMIENDO);
 }
 
-void Herbivoro::comer(const float &dt) {
+void Metazoo::comer(const float &dt) {
   if (this->comidaActual == nullptr || this->comidaActual->age <= 1.f) {
     this->setState(BUSCANDO_COMIDA);
   }
@@ -146,8 +170,9 @@ void Herbivoro::comer(const float &dt) {
 
   float deltaTime = this->clock.getElapsedTime().asSeconds();
   if (deltaTime >= .9f) {
-    this->hunger = std::max(0.f, this->hunger - 10.f);
-    this->comidaActual->age -= 0.8f;
+    this->hunger = std::max(0.f, this->hunger - 10.f * comidaPotenciador);
+    this->comidaActual->health -=
+        0.8f * comidaPotenciador * this->comidaActual->health / 100;
   }
 
   if (this->hunger <= 20) {
@@ -155,8 +180,28 @@ void Herbivoro::comer(const float &dt) {
     setState(IDLE);
   }
 }
-void Herbivoro::huir(const float &dt) {}
-void Herbivoro::dormir(const float &dt) {
+
+void Metazoo::huir(const float &dt) {
+  Entity *predador = this->getClosestEntity(this->predadores, 0.f);
+  if (predador == nullptr || this->distanceTo(predador) > this->vision ||
+      predador == this) {
+    setState(IDLE);
+    return;
+  }
+
+  double diferenciaX = (predador->getPosition().x - this->getPosition().x);
+  double diferenciaY = (predador->getPosition().y - this->getPosition().y);
+
+  diferenciaX = -diferenciaX;
+  diferenciaY = -diferenciaY;
+
+  this->move(diferenciaX, diferenciaY, dt, this->energy / 100.0);
+
+  if (this->distanceTo(predador) > this->vision)
+    this->setState(IDLE);
+}
+
+void Metazoo::dormir(const float &dt) {
   this->shape.setFillColor(
       sf::Color(this->color.r, this->color.g, this->color.b, 150));
 
@@ -174,10 +219,10 @@ void Herbivoro::dormir(const float &dt) {
   }
 }
 
-void Herbivoro::buscarPareja(const float &dt) {}
-void Herbivoro::reproducirse(const float &dt) {}
+void Metazoo::buscarPareja(const float &dt) {}
+void Metazoo::reproducirse(const float &dt) {}
 
-void Herbivoro::debug() {
+void Metazoo::debug() {
   sf::FloatRect bounds = this->shape.getGlobalBounds();
   int bound_added = 60;
   bounds.left += bound_added / 2.f;

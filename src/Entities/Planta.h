@@ -9,5 +9,7 @@ public:
   void update(const float &dt) override;
 
 private:
-  float maxGrow = 5.f;
+  float maxGrow = 4.f;
+
+  void envejecer(const float &dt) override;
 };
